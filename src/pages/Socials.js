@@ -31,13 +31,13 @@ function Socials() {
         <p className=''>Плавают как-то два гея в бассейне...</p>
       </div></Link>
       <hr className='border-dark-gray w-3/4 mx-auto lg:w-1/2 lg:left-0 lg:absolute lg:ml-12'/>
-      <Link><div className='message_container grid grid-rows-2 grid-flow-col gap-3.5 justify-start mt-6'>
+      <Link><div className='message_container grid grid-rows-1 grid-flow-col gap-3.5 justify-start mt-6'>
         <img src = {user_pfp} className='w-12 rounded-br-2xl rounded-tr-2xl rounded-tl-2xl row-span-3 mt-2'></img>
         <p className='font-bold'>Гнида</p>
         <p className=''>Плавают как-то два гея в бассейне...</p>
       </div></Link>
       <hr className='border-dark-gray w-3/4 mx-auto lg:w-1/2 lg:left-0 lg:absolute lg:ml-12'/>
-      <Link><div className='message_container grid grid-rows-2 grid-flow-col gap-3.5 justify-start mt-6'>
+      <Link><div className='message_container grid grid-rows-1 grid-flow-col gap-3.5 justify-start mt-6'>
         <img src = {user_pfp} className='w-12 rounded-br-2xl rounded-tr-2xl rounded-tl-2xl row-span-3 mt-2'></img>
         <p className='font-bold'>Гнида</p>
         <p className=''>Плавают как-то два гея в бассейне...</p>
