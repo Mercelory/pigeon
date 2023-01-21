@@ -13,16 +13,16 @@ function Socials() {
     setToggle(1-toggle);;
   }
 
-  const tog = document.getElementById("tog");
-  const thing = document.getElementById("thing");
-  const thing2 = document.getElementById("thing2");
+  // const tog = document.getElementById("tog");
+  // const thing = document.getElementById("thing");
+  // const thing2 = document.getElementById("thing2");
 
-  tog.addEventListener("click", function() {
+  // tog.addEventListener("click", function() {
   
-    thing.classList.toggle("animate__animated animate__zoomInRight");
-    thing2.classList.toggle("animate__animated animate__zoomInRight");
+  //   thing.classList.toggle("animate__animated animate__zoomInRight");
+  //   thing2.classList.toggle("animate__animated animate__zoomInRight");
     
-  });
+  // });
   return (
     <div className='p-6'>
       <Link><div className='message_container grid grid-rows-3 grid-flow-col gap-2'>
@@ -31,7 +31,7 @@ function Socials() {
         <p className='row-span-2 col-span-2  text-base'>Плавают как-то два гея в бассейне...</p>
       </div></Link>
       <hr className='mt-5 border-dark-gray w-1/2 mx-auto'/>
-      <Link><div className='message_container grid grid-rows-3 grid-flow-col gap-2 mt-3'>
+      <Link to = "/kitten"><div className='message_container grid grid-rows-3 grid-flow-col gap-2 mt-3'>
         <img src = {user_pfp} className='w-12 rounded-br-2xl rounded-tr-2xl rounded-tl-2xl row-span-3 my-5 mr-2'></img>
         <p className='col-span-2 font-bold text-base'>Гнида</p>
         <p className='row-span-2 col-span-2  text-base'>Плавают как-то два гея в бассейне...</p>

@@ -5,7 +5,6 @@ import '../App.css';
 import logo from '../icons/logo.svg';
 import add_pfp from '../icons/add.svg';
 
-import Socials from './Socials';
 
 
 
