@@ -23,12 +23,13 @@ function Auth() {
                     <label className='w-24 h-24 bg-dark-gray rounded-3xl cursor-pointer p-7'>
                         <input type="file" size="60" id="file" onchange="loadFile(event)"/>
                         <img id="output" className="w-10 h-10" src={add_pfp}/>
-
+                        
                     </label>
                 </div>
                 <div>
                     <form className='flex flex-wrap justify-center m-5'>
                         <div className='relative mb-6'>
+                            
                             <div
                                 className='absolute inset-y-0 left-0 flex items-center pl-6 pointer-events-none'>
                                 <svg
@@ -102,6 +103,7 @@ function Auth() {
                             className="h-10 w-36 rounded-xl bg-white cursor-pointer m-5"
                             type="submit"/></Link>
                     </form>
+                    <p className='text-xs'>Никита с др</p>
                 </div>
             </header>
         </div>
