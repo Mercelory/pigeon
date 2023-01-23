@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pigeon/static/css/main.de803a0e.css",
-    "main.js": "/pigeon/static/js/main.6e45f2ab.js",
+    "main.js": "/pigeon/static/js/main.80da54bf.js",
     "static/js/787.1b19de62.chunk.js": "/pigeon/static/js/787.1b19de62.chunk.js",
     "static/media/search.svg": "/pigeon/static/media/search.8648038e142f35edfc18822fc19418ed.svg",
     "index.html": "/pigeon/index.html",
@@ -9,11 +9,11 @@
     "static/media/logo_white.svg": "/pigeon/static/media/logo_white.0617ffbb84ddc6a40f41feff5d83cee9.svg",
     "static/media/logo.svg": "/pigeon/static/media/logo.126035d1f058530674d7dc8e3c8a812c.svg",
     "main.de803a0e.css.map": "/pigeon/static/css/main.de803a0e.css.map",
-    "main.6e45f2ab.js.map": "/pigeon/static/js/main.6e45f2ab.js.map",
+    "main.80da54bf.js.map": "/pigeon/static/js/main.80da54bf.js.map",
     "787.1b19de62.chunk.js.map": "/pigeon/static/js/787.1b19de62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de803a0e.css",
-    "static/js/main.6e45f2ab.js"
+    "static/js/main.80da54bf.js"
   ]
 }
