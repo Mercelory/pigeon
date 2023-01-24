@@ -9,8 +9,10 @@ import attachment_ico from '../icons/attachment.svg'
 function OpenDialogue() {
   return (
     <div
-    className={clsx('dialog_container w-1/2 p-2 m-auto')}>
-    <div className='header flex pl-2 m-auto '>
+    className={clsx('dialog_container w-1/2 m-auto',
+                     'lg:m-0')}>
+    <div className={clsx('header flex flex-col pl-2 m-auto justify-items-center',
+                         'lg:w-screen')}>
         <button className='hidden'>
             <svg
                 aria-hidden="true"
@@ -25,10 +27,12 @@ function OpenDialogue() {
             </svg>
         </button>
         <img src={user_pfp} className='m-auto w-12 rounded-2xl mb-2'/>
-    </div>
+
     <p className='text-center font-bold'>Гнида</p>
     <hr className='w-1/2 border-slate-500 m-auto h-3 mt-2'/>
-    <div className='w-[85vh] h-[75vh] overflow-y-auto p-3'>
+    </div>
+    <div className={clsx('w-[85vh] h-[75vh] overflow-y-auto p-3',
+                    'lg:w-screen')}>
         <div
               className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 mr-auto h-auto w-44 break-words max-w-min'>
               <p className=''>Хуйхуйхуйхуйхуххуйхухйуйхухйухйхуцхухйхasdddddddddddddddddddddddddddddddухap[sod[pasod[pasodaps[doasdo[pasdasйх</p>
@@ -55,15 +59,15 @@ function OpenDialogue() {
             <p className='text-xs mt-3'>00:00</p>
         </div> 
         <div className='w-screen absolute bottom-0 left-0'>
-        <div className='type_message flex bg-zinc-800 rounded-t-3xl justify-between'>
+        <div className='type_message flex bg-zinc-800 rounded-t-3xl justify-between w-screen'>
             <img src = {emoji_ico} className='ml-4'></img>
             <input 
-            className={clsx('h-9 rounded-xl p-3 mx-3 my-3 w-3/4', 
+            className={clsx('h-9 rounded-xl p-3 mx-3 my-3 w-screen', 
                             'lg: w-1/2')}
             placeholder='Type the message..'></input>
             <label className=''>
                         <input type="file" size="8" id="file"/>
-                        <img className="w-7 h-7 mt-4 mr-4 cursor-pointer" src={attachment_ico}/>
+                        <img className="w-7 h-7 mt-4 mr-7 cursor-pointer" src={attachment_ico}/>
                         
                     </label>
         </div>
