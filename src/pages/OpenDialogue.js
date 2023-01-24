@@ -2,10 +2,14 @@ import React from 'react'
 import clsx from 'clsx';
 
 import user_pfp from '../icons/kitten.jpg'
+import emoji_ico from '../icons/emoji.svg'
+import attachment_ico from '../icons/attachment.svg'
+
+
 function OpenDialogue() {
   return (
     <div
-    className={clsx('dialog_container w-4/5 p-2 border-slate-400 border-2 rounded-xl ml-2 ', 'sm:hidden')}>
+    className={clsx('dialog_container w-screen p-2')}>
     <div className='header flex pl-2 m-auto '>
         <button className='hidden'>
             <svg
@@ -35,7 +39,16 @@ function OpenDialogue() {
             <p className='ml-2'>Анекдот</p>
             <p className='text-xs mt-3 ml-1'>00:00</p>
         </div>
-        <div className='type_message absolute bottom-0 bg-black w-24'></div>
+        <div className='w-screen absolute bottom-0 left-0'>
+        <div className='type_message flex bg-zinc-800 rounded-t-3xl justify-between'>
+            <img src = {emoji_ico} className='ml-4'></img>
+            <input 
+            className={clsx('h-9 rounded-xl p-3 mx-3 my-3 w-3/4', 
+                            'lg: w-1/2')}
+            placeholder='Type the message..'></input>
+            <img src = {attachment_ico} className='mr-4'></img>
+        </div>
+        </div>
     </div>
 
 </div>

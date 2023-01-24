@@ -103,7 +103,6 @@ function Auth() {
                             className="h-10 w-36 rounded-xl bg-white cursor-pointer m-5"
                             type="submit"/></Link>
                     </form>
-                    <p className='text-xs'>Никита с др</p>
                 </div>
             </header>
         </div>
