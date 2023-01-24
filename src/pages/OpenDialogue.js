@@ -9,7 +9,7 @@ import attachment_ico from '../icons/attachment.svg'
 function OpenDialogue() {
   return (
     <div
-    className={clsx('dialog_container w-screen p-2')}>
+    className={clsx('dialog_container w-1/2 p-2 m-auto')}>
     <div className='header flex pl-2 m-auto '>
         <button className='hidden'>
             <svg
@@ -28,17 +28,32 @@ function OpenDialogue() {
     </div>
     <p className='text-center font-bold'>Гнида</p>
     <hr className='w-1/2 border-slate-500 m-auto h-3 mt-2'/>
-    <div className='h-[480px] w-1/2'>
+    <div className='w-[85vh] h-[75vh] overflow-y-auto p-3'>
         <div
-            className='messages_in_dialogue ml-2 mt-2 flex rounded-3xl border-slate-800 border-2 w-36 p-1'>
-            <p className='ml-2'>Анекдот</p>
-            <p className='text-xs mt-3 ml-1'>00:00</p>
+              className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 mr-auto h-auto w-44 break-words max-w-min'>
+              <p className=''>Хуйхуйхуйхуйхуххуйхухйуйхухйухйхуцхухйхasdddddddddddddddddddddddddddddddухap[sod[pasod[pasodaps[doasdo[pasdasйх</p>
+              <p className='text-xs mt-3'>00:00</p>
         </div>
         <div
-            className='messages_in_dialogue_answer ml-2 mt-2 flex rounded-3xl border-slate-800 border-2 w-36 p-1 right-0 absolute mr-11'>
-            <p className='ml-2'>Анекдот</p>
-            <p className='text-xs mt-3 ml-1'>00:00</p>
-        </div>
+            className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 ml-auto break-words max-w-min'>
+            <p className=''>Хуйхуйхуйхуйхуххуйхухйуйхухйухйхуцхухйхухap[sod[pasod[pasodaps[doasdo[pasdasйх</p>
+            <p className='text-xs mt-3'>00:00</p>
+        </div>  
+        <div
+            className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 ml-auto break-words max-w-min'>
+            <p className=''>Хуйasdasdadsadasdasdasdasdaadsasdsadasdasdasdasdasdasdasdasdadasdsadasdasd</p>
+            <p className='text-xs mt-3'>00:00</p>
+        </div> 
+        <div
+            className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 ml-auto break-words max-w-min'>
+            <p className=''>Хуй</p>
+            <p className='text-xs mt-3'>00:00</p>
+        </div> 
+        <div
+            className='messages_in_dialogue_answer mt-2 rounded-3xl border-slate-800 border-2 p-2 mr-auto break-words max-w-min'>
+            <p className=''>Хуй</p>
+            <p className='text-xs mt-3'>00:00</p>
+        </div> 
         <div className='w-screen absolute bottom-0 left-0'>
         <div className='type_message flex bg-zinc-800 rounded-t-3xl justify-between'>
             <img src = {emoji_ico} className='ml-4'></img>
@@ -46,7 +61,11 @@ function OpenDialogue() {
             className={clsx('h-9 rounded-xl p-3 mx-3 my-3 w-3/4', 
                             'lg: w-1/2')}
             placeholder='Type the message..'></input>
-            <img src = {attachment_ico} className='mr-4'></img>
+            <label className=''>
+                        <input type="file" size="8" id="file"/>
+                        <img className="w-7 h-7 mt-4 mr-4 cursor-pointer" src={attachment_ico}/>
+                        
+                    </label>
         </div>
         </div>
     </div>
