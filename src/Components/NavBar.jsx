@@ -10,7 +10,7 @@ function NavBar() {
           <img src = {PigeonIco} className="w-4 mr-2"></img>
           <p>Pigeon</p>
         </a>
-        <ul className="md:flex hidden justify-center w-1/5 items-center ">
+        <ul className="md:flex hidden justify-center w-1/5 items-center">
           <li className="text-2xl bg-white rounded-t-md py-1 px-3 mr-3"><a href = "#Messages" className="flex items-center"><TbMessage/><p className="mx-1 text-lg font-semibold">Messages</p></a></li>
           <li className="text-lg hover:bg-white rounded-lg py-1 px-3 transition-normal duration-400"><TbUsers /></li>
           <li className="text-lg hover:bg-white rounded-lg py-1 px-3 transition-normal duration-400 "><TbHash /></li>

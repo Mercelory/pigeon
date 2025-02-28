@@ -7,13 +7,13 @@ function DirectMessages() {
     
     <section id = "#Messages">
         <div className='md:hidden text-center mt-50'>
-            <p>Pigeon is now not working on mobile devices :(</p>
+            <p className='p-5'>Pigeon is now not working on mobile devices :(</p>
         </div>
-         <div className="md:flex flex-row hidden">
-      <div className="md:pt-15 pt-5 pl-5 md:h-screen md:w-[25%] md:border-r-1 border-slate-200 h-[20%] w-screen relative">
+         <div className="md:flex hidden">
+      <div className="pt-15 pl-5 h-screen w-1/4 border-r-1 border-slate-200">
       <LeftSideDM/>
       </div>
-      <div className="md:pt-10 md:h-screen md:w-[75%] h-[80%] relative">
+      <div className="pt-10 h-screen w-3/4">
       <RightSIdeDM/>
       </div>
       </div>
