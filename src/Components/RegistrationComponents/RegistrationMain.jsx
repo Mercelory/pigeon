@@ -1,40 +1,45 @@
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import PigeonIco from "../../img/Subtract.svg"
 
 const Register = () => {
-  const [email, setEmail] = useState("");
+  const [Name, setName] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
-    login({ email });
+    login({ Name });
     navigate("/Messages"); // Перенаправляем после регистрации
   };
 
   return (
-    <div>
-      <h2>Регистрация</h2>
-      <form onSubmit={handleRegister}>
+    <section className="flex bg-linear-to-r from-slate-200 to-white">
+      <div className="flex justify-center items-center flex-col w-screen h-screen">
+      <img src ={PigeonIco} className="w-15 mb-10 "></img>
+      <h1 className="font-bold text-3xl mb-3 text-slate-500">Registration</h1>
+      <form onSubmit={handleRegister} className="flex flex-col">
         <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Name"
+          value={Name}
+          onChange={(e) => setName(e.target.value)}
           required
-        />
+           className="mb-3 placeholder:text-neutral-400 rounded-md border-1 p-2 border-neutral-400 hover:border-neutral-900 transition-color duration-300"/>
         <input
           type="password"
-          placeholder="Пароль"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />
-        <button type="submit">Зарегистрироваться</button>
+          className="mb-3 rounded-md placeholder:text-neutral-400 border-1 p-2 border-neutral-400 hover:border-neutral-900 transition-color duration-300"/>
+        <button type="submit" className="rounded-md border-1 border-neutral-400 p-1 w-full bg-slate-500 text-white transition-color duration-300">Confirm</button>
       </form>
+      <h2 className="text-neutral-400 mt-3 font-sm">Already registered? <a href = '#' className="font-bold text-slate-500">Sign In</a></h2>
     </div>
+    </section>
   );
 };
 
