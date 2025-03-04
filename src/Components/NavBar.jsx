@@ -1,6 +1,6 @@
 
 import { TbMessageCircle, TbUsers, TbHash, TbSearch, TbUserCircle } from "react-icons/tb";
-import PigeonIco from "../img/Subtract.svg"
+import PigeonIco from "../img/PigeonIco.svg"
 
 function NavBar() {
   return (
