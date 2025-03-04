@@ -2,7 +2,7 @@
   "name": "pigeon",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mercelory.github.io/pigeon/",
+  "homepage": "https://mercelory.github.io/pigeon",
   "type": "module",
   "scripts": {
     "dev": "vite",

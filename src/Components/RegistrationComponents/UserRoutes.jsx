@@ -10,7 +10,7 @@ function PrivateRoute({ children }) {
 
 export default function UserRoutes() {
   return (
-    <Router basename="/pigeon">
+    <Router basename="https://mercelory.github.io/pigeon">
       <Routes>
         <Route path="/" element={< RegistrationMain/> } />
         <Route path="/messages" element={<PrivateRoute><DirectMessages /></PrivateRoute>} />
