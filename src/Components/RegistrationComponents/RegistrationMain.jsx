@@ -6,7 +6,7 @@ const Register = () => {
     <section className="flex items-center justify-center h-screen bg-neutral-100">
       <div className="flex flex-col items-center w-screen h-screen justify-center gap-6">
         <div className="">
-          <img src={PigeonIco_2} className="w-80 " />
+          <img src={PigeonIco_2} className="w-80" />
         </div>
         <form className="flex flex-col space-y-4 w-full max-w-xs">
           <input
