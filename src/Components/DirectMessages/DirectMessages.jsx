@@ -1,11 +1,12 @@
 import React from 'react'
 import LeftSideDM from './LeftSideDM'
 import RightSIdeDM from './RightSIdeDM'
+import NavBar from '../NavBar'
 
 function DirectMessages() {
   return (
-    
     <section id = "#Messages">
+      <NavBar />
         <div className='md:hidden text-center mt-50'>
             <p className='p-5'>Pigeon is now not working on mobile devices :(</p>
         </div>

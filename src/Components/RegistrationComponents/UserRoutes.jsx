@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "./AuthContext"
 import DirectMessages from "../DirectMessages/DirectMessages";
 import RegistrationMain from "./RegistrationMain"
 
@@ -8,12 +8,12 @@ function PrivateRoute({ children }) {
   return user ? children : <Navigate to="/" />;
 }
 
-function YourRoutes() {
+export default function UserRoutes() {
   return (
-    <Router>
+    <Router basename="/pigeon">
       <Routes>
-        <Route path="/" element={<DirectMessages /> } />
-        <Route path="/registration" element={<PrivateRoute><RegistrationMain /></PrivateRoute>} />
+        <Route path="/" element={< RegistrationMain/> } />
+        <Route path="/messages" element={<PrivateRoute><DirectMessages /></PrivateRoute>} />
       </Routes>
     </Router>
   );
