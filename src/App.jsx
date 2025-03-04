@@ -1,29 +1,14 @@
-import NavBar from "./Components/NavBar"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RegistrationMain from "./Components/RegistrationComponents/RegistrationMain";
-import ProtectedRoute from "./Components/RegistrationComponents/ProtectedRoute";
-import { AuthProvider } from "./Components/RegistrationComponents/AuthContext";
 import DirectMessages from "./Components/DirectMessages/DirectMessages";
+import RegistrationMain from "./Components/RegistrationComponents/RegistrationMain"
+import NavBar from "./Components/NavBar"
+const CLIENT_ID = "700637116885-9pv5fjvn8ocq9fv3fuei6lhoi4t2v1c9.apps.googleusercontent.com";
+
 function App() {
+
+  
   return (
     <>
-       <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/register" element={<RegistrationMain />} />
-          <Route
-            path="/Messages"
-            element={
-              <ProtectedRoute>
-                <NavBar/>
-                <DirectMessages/>
-              </ProtectedRoute>
-            }
-          />
-          <Route path="*" element={<RegistrationMain />} /> {/* Перенаправление */}
-        </Routes>
-      </Router>
-    </AuthProvider>
+     <RegistrationMain />
     </>
   )
 }
