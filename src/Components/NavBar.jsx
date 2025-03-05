@@ -1,8 +1,9 @@
-
-import { TbMessageCircle, TbUsers, TbHash, TbSearch, TbUserCircle } from "react-icons/tb";
-import PigeonIco from "../img/PigeonIco.svg"
+import { TbMessageCircle, TbHash } from "react-icons/tb";
 import { googleLogout } from "@react-oauth/google";
 import { useAuth } from "./RegistrationComponents/AuthContext";
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function NavBar() {
   const { user, setUser } = useAuth();
@@ -11,24 +12,20 @@ function NavBar() {
     googleLogout();
     setUser(null);
   };
-
   return (
-    <section className='md:fixed top-0 left-0 w-screen bg-slate-200 '>
-      <ul className="flex justify-evenly font-bold items-center text-center">
-        <a href = "#" className="flex">
-          <img src = {PigeonIco} className="w-8 mr-2"></img>
-        </a>
-        <ul className="md:flex hidden  items-center space-x-1 pt-1">
-          <li className="text-lg bg-white rounded-t-2xl py-1 px-3"><a href = "#Messages" className="flex items-center"><TbMessageCircle/><p className="ml-1 text-lg font-semibold">Messages</p></a></li>
-          <li className="text-lg hover:bg-white rounded-lg py-1 px-3 transition-normal duration-400"><TbUsers /></li>
-          <li className="text-lg hover:bg-white rounded-lg py-1 px-3 transition-normal duration-400 "><TbHash /></li>
-          <li className="text-lg hover:bg-white rounded-lg py-1 px-3 transition-normal duration-400 "><TbSearch /></li>
-        </ul>
-          <div  onClick={handleLogout} className="md:flex hidden text-center items-center">
-          <img src = {user.picture} className="w-8 mr-2 rounded-full cursor-pointer"/>
-          <p>{user.name}</p>
-          </div>
-
+    <section className='absolute bottom-0 left-0 w-1/4 h-10 bg-indigo-50 '>
+        <ul className="md:flex hidden justify-center items-center space-x-1 h-full w-full">
+        <li className="group text-2xl  text-indigo-400 transition-normal duration-400 rounded-lg py-1 px-3">
+  <Link to = "/" className="flex items-center">
+    <TbMessageCircle />
+  </Link>
+</li>
+          <li className="group text-2xl hover:text-indigo-400 transition-normal duration-400 rounded-lg py-1 px-3 hover:scale-90">
+  <Link to = "threads" className="flex items-center">
+    <TbHash />
+  </Link>
+</li>
+          <img onClick={handleLogout} src = {user.picture} className="w-8 mr-2 rounded-full cursor-pointer hover:border-2 hover:p-1 hover:border-indigo-300 transition-normal duration-400  right-0 absolute"/>
       </ul>
     </section>
   )

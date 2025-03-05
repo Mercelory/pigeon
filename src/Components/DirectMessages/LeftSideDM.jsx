@@ -1,3 +1,4 @@
+import NavBar from '../NavBar'
 import MessagesList from './MessagesList'
 import SearchMessages from './SearchMessages'
 
@@ -6,6 +7,7 @@ function LeftSideDM() {
     <section className=''>
         <SearchMessages/>
         <MessagesList/>
+        <NavBar />
     </section>
   )
 }

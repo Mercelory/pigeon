@@ -13,12 +13,12 @@ const Register = () => {
   const handleSuccess = (response) => {
     const decodedUser = jwtDecode(response.credential);
     setUser(decodedUser);
-    navigate("/messages");
+    navigate("/");
   };
 
   useEffect(() => {
     if (user) {
-      navigate("/messages");
+      navigate("/");
     }
   }, [user, navigate]);
 
@@ -26,9 +26,8 @@ const Register = () => {
     onSuccess: (response) => {
       const userInfo = jwtDecode(response.credential);
       setUser(userInfo);
-      navigate("/messages");
+      navigate("/");
     },
-    onError: () => console.error("Ошибка авторизации"),
   });
 
   return (
@@ -64,14 +63,10 @@ const Register = () => {
           </a>
         </h2>
         <div className="border border-indigo-300 w-16"></div>
-        <button
-      onClick={login}
-      className="border border-zinc-700 flex justify-center items-center h-12 max-w-xs w-full rounded-lg p-2 text-neutral-900 hover:outline-none hover:ring-2 hover:ring-indigo-600 transition-color duration-300"
-    >
-      <TbBrandGoogle className="text-2xl" />
-      Войти через Google
-    </button>
-    <GoogleLogin onSuccess={handleSuccess} onError={() => console.error("Ошибка авторизации")} />
+    <GoogleLogin theme="filled_indigo" 
+  shape="circle"
+  width="320px"
+     onSuccess={handleSuccess} onError={() => console.error("Ошибка авторизации")} />
       </div>
     </section>
   );
